@@ -19,6 +19,13 @@
     </ion-toolbar>
   </div>
 
- 
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="clickedSearch()">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="Search Favorites"></ion-searchbar>
+  </ion-toolbar>
   <div id="container"></div>
 </ion-content>
