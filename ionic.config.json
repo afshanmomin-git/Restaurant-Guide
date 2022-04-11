@@ -1,0 +1,8 @@
+{
+  "name": "PersonalRestaurantGuide",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
