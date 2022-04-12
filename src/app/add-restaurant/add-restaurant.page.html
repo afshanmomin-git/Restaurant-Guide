@@ -13,7 +13,7 @@
     <ion-input placeholder='Restaurant Name' type='text' [(ngModel)]="name" ></ion-input>
   </ion-item>
 
-  <ion-item>
+  <!-- <ion-item>
     <ion-label position="floating">Street Number</ion-label>
     <ion-input placeholder='Street Number' [(ngModel)]="streetNo"></ion-input>
 
@@ -46,7 +46,7 @@
       <ion-label position='fixed' >Rating(1-5)</ion-label>
       <br>
       
-    </ion-item>
+    </ion-item> -->
 
     <ion-item>
       <ion-label position="floating">Tags</ion-label>
@@ -54,8 +54,8 @@
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Comments</ion-label>
-      <ion-textarea ></ion-textarea>
+      <ion-label>Description</ion-label>
+      <ion-textarea type="text" placeholder="Enter Description" [(ngModel)]="description"></ion-textarea>
     </ion-item>
 
     <ion-button type="submit" (click)="addRestaurant()">Add Restaurant</ion-button>
