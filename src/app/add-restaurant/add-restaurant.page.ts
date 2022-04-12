@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-add-restaurant',
@@ -7,7 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddRestaurantPage implements OnInit {
 
+  id:any;
+  name:any;
+  address:any;
+  number:any;
+  rating:any;
+  tags:any;
+  comments:any;
+  confirm:any;
+
+  streetNo:any;
+  streetName:any;
+  streetType:any;
+  city:any;
+  
   constructor() { }
+
+  
+  addRestaurant() {
+
+  
+
+
+  }
+  
+  
 
   ngOnInit() {
   }

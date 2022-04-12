@@ -13,7 +13,7 @@ import { AddRestaurantPage } from './add-restaurant.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    AddRestaurantPageRoutingModule
+    AddRestaurantPageRoutingModule,
   ],
   declarations: [AddRestaurantPage]
 })
