@@ -14,5 +14,8 @@ export class HomePage {
   aboutUs(){
     this.navCtrl.navigateForward('/about-us');
   }
+  addRestaurant(){
+    this.navCtrl.navigateForward('/add-restaurant');
+  }
 
 }
