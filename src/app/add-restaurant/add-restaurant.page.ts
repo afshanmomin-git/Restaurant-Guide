@@ -58,7 +58,9 @@ export class AddRestaurantPage implements OnInit {
 
   }
   
-  
+  cancel(){
+    this.router.navigateByUrl('/home')
+  }
 
   ngOnInit() {
   }
