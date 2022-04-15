@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AddRestaurantPageRoutingModule } from './add-restaurant-routing.module';
 
 import { AddRestaurantPage } from './add-restaurant.page';
+import { IonicRatingModule } from 'ionic4-rating';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { AddRestaurantPage } from './add-restaurant.page';
     FormsModule,
     IonicModule,
     AddRestaurantPageRoutingModule,
+    IonicRatingModule,
   ],
   declarations: [AddRestaurantPage]
 })

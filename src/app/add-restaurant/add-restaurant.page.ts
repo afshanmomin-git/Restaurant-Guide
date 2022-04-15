@@ -11,14 +11,11 @@ export class AddRestaurantPage implements OnInit {
   name:any;
   address:any;
   number:any;
-  rating:any;
+  rate:any;
   tags:any;
   comments:any;
   confirm:any;
-
-  streetNo:any;
   streetName:any;
-  streetType:any;
   city:any;
   
   constructor() { }
@@ -29,6 +26,9 @@ export class AddRestaurantPage implements OnInit {
   
 
 
+  }
+  onRateChange(event) {
+    console.log('Your rate:', event);
   }
   
   

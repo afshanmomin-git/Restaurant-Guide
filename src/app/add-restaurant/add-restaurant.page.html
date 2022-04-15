@@ -13,26 +13,13 @@
     <ion-input placeholder='Restaurant Name' type='text' [(ngModel)]="name" ></ion-input>
   </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Street Number</ion-label>
-    <ion-input placeholder='Street Number' [(ngModel)]="streetNo"></ion-input>
-
-  </ion-item>
+  
 
   <ion-item>
     <ion-label position="floating">Street Name</ion-label>
     <ion-input placeholder='Street Name' [(ngModel)]="streetName" ></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label position="floating">Street Type</ion-label>
-    <ion-select placeholder="Select One" [(ngModel)]="streetType">
-      <ion-select-option value="Avenue">Avenue</ion-select-option>
-      <ion-select-option value="Street">Street</ion-select-option>
-      <ion-select-option value="Road">Road</ion-select-option>
-      <ion-select-option value="Drive">Drive</ion-select-option>
-
-    </ion-select>
-    </ion-item>
+  
     <ion-item>
       <ion-label position="floating">City</ion-label>
       <ion-input placeholder='City' [(ngModel)]="city"></ion-input>
@@ -45,12 +32,24 @@
     <ion-item>
       <ion-label position='fixed' >Rating(1-5)</ion-label>
       <br>
+      <rating [(ngModel)]="rate"
+            size="default"
+        (ngModelChange)="onRateChange($event)">
+</rating>
+        
+     
+      
       
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Tags</ion-label>
       <ion-input placeholder='Tags' ></ion-input>
+      
+
+
+
+
     </ion-item>
 
     <ion-item>
