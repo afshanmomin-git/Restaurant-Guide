@@ -8,12 +8,19 @@
 </ion-header>
 
 <ion-content>
+  <div id="container">
+    <ion-text> Add Restaurant </ion-text>
+  </div>
   <ion-item>
     <ion-label position="floating">Restaurant Name</ion-label>
     <ion-input placeholder='Restaurant Name' type='text' [(ngModel)]="name" ></ion-input>
   </ion-item>
 
   <ion-item>
+    <ion-label position="floating">Address</ion-label>
+    <ion-input placeholder='Address' type='text' [(ngModel)]="Address" ></ion-input>
+  </ion-item>
+  <!-- <ion-item>
     <ion-label position="floating">Street Number</ion-label>
     <ion-input placeholder='Street Number' [(ngModel)]="streetNo"></ion-input>
 
@@ -46,18 +53,26 @@
       <ion-label position='fixed' >Rating(1-5)</ion-label>
       <br>
       
-    </ion-item>
+    </ion-item> -->
 
+   
+
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea type="text" placeholder="Enter Description" [(ngModel)]="description"></ion-textarea>
+    </ion-item>
     <ion-item>
       <ion-label position="floating">Tags</ion-label>
-      <ion-input placeholder='Tags' ></ion-input>
+      <ion-input placeholder='Tags' type='text' [(ngModel)]="tags" ></ion-input>
     </ion-item>
+    <br/>
 
-    <ion-item>
-      <ion-label position="floating">Comments</ion-label>
-      <ion-textarea ></ion-textarea>
-    </ion-item>
-
-    <ion-button type="submit" (click)="addRestaurant()">Add Restaurant</ion-button>
-
+    <ion-row>
+      <ion-col col-6> 
+          <ion-button color="danger"  (click)="cancel()" role="button">Cancel</ion-button>
+        </ion-col>
+        <ion-col col-6>
+          <ion-button type="submit" (click)="addRestaurant()">Add Restaurant</ion-button>
+        </ion-col>
+    </ion-row>
 </ion-content>
