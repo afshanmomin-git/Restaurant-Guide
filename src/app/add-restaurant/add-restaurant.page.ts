@@ -11,23 +11,6 @@ import { IonicRatingModule } from 'ionic4-rating';
 export class AddRestaurantPage implements OnInit {
   constructor(
     private restaurantService: RestaurantService,
-<<<<<<< HEAD
-    private router: Router,
-  ) { }
-    
-  address:any;
-  number:any;
-  rate: any;
-  
-  comments:any;
-  // confirm:any;
-  streetName: any;
-  city:any;
-  
-  success:string=''
-  error:string=''
-  name:string=''
-=======
     private router: Router
   ) {}
 
@@ -44,7 +27,6 @@ export class AddRestaurantPage implements OnInit {
   // streetName:any;
   // streetType:any;
   // city:any;
->>>>>>> 548e81364806576821ca54c028e81e3b5a4d29f6
 
   success: string = '';
   error: string = '';
@@ -55,31 +37,6 @@ export class AddRestaurantPage implements OnInit {
 
   async addRestaurant() {
     this.restaurantService
-<<<<<<< HEAD
-    .createRestaurant(
-      this.name,
-      this.description,
-    )
-    .then(() => {
-      this.success = "Logged in";
-      this.error = "";
-      this.router.navigateByUrl('/home')
-    })
-    .catch(err => {
-      this.error = err;
-      this.success = ""
-    });
-  
-
-
-  }
-  onRateChange(event) {
-    console.log('Your rate:', event);
-  }
-  
-  cancel(){
-    this.router.navigateByUrl('/home')
-=======
       .createRestaurant(this.name, this.description)
       .then(() => {
         this.success = 'Logged in';
@@ -90,7 +47,6 @@ export class AddRestaurantPage implements OnInit {
         this.error = err;
         this.success = '';
       });
->>>>>>> 548e81364806576821ca54c028e81e3b5a4d29f6
   }
 
   cancel() {

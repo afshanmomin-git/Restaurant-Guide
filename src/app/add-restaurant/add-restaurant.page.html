@@ -22,19 +22,14 @@
     ></ion-input>
   </ion-item>
 
-  <ion-item>
+  <!-- <ion-item>
     <ion-label position="floating">Address</ion-label>
-<<<<<<< HEAD
-    <ion-input placeholder='Address' type='text' [(ngModel)]="address" ></ion-input>
-  </ion-item>
-  
-=======
     <ion-input
       placeholder="Address"
       type="text"
-      [(ngModel)]="Address"
+      [(ngModel)]="address"
     ></ion-input>
-  </ion-item>
+  </ion-item> -->
 
   <ion-item>
     <ion-label position="floating">Description</ion-label>
@@ -44,48 +39,13 @@
       [(ngModel)]="description"
     ></ion-textarea>
   </ion-item>
->>>>>>> 548e81364806576821ca54c028e81e3b5a4d29f6
   <ion-item>
     <ion-label position="floating">Tags</ion-label>
     <ion-input placeholder="Tags" type="text" [(ngModel)]="tags"></ion-input>
   </ion-item>
-<<<<<<< HEAD
-    <ion-item>
-      <ion-label position="floating">City</ion-label>
-      <ion-input placeholder='City' [(ngModel)]="city"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Phone</ion-label>
-      <ion-input placeholder='Phone' type="number" [(ngModel)]="number"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position='fixed' >Rating(1-5)</ion-label>
-      <br>
-      <rating [(ngModel)]="rate"
-            size="default"
-        (ngModelChange)="onRateChange($event)">
-    </rating>
-        
-     
-      
-      
-    </ion-item>
-
-   
-
-    <ion-item>
-      <ion-label position="floating">Description</ion-label>
-      <ion-textarea type="text" placeholder="Enter Description" [(ngModel)]="description"></ion-textarea>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Tags</ion-label>
-      <ion-input placeholder='Tags' type='text' [(ngModel)]="tags" ></ion-input>
-=======
   <ion-item>
     <ion-label position="floating" >Upload Image</ion-label>
     <ion-input type="file" name="photo" [(ngModel)]="image"></ion-input>
->>>>>>> 548e81364806576821ca54c028e81e3b5a4d29f6
     </ion-item>
   <br />
 
