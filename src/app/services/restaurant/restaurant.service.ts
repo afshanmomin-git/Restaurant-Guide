@@ -7,7 +7,7 @@ import { Storage } from '@capacitor/storage';
 export class RestaurantService {
   constructor() {}
 
-  public async createRestaurant(restaurantName: string, description: string) {
+  public async createRestaurant(restaurantName: string, description: string,tags: string[]) {
     const temp = await Storage.get({ key: 'restaurants' });
     let allRestaurants = temp.value ? JSON.parse(temp.value) : [];
     const restaurantWithSameName = allRestaurants.find(
@@ -21,6 +21,7 @@ export class RestaurantService {
       id,
       restaurantName,
       description,
+      tags,
     });
     await Storage.set({
       key: 'restaurants',

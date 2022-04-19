@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/member-ordering */
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RestaurantService } from '../services/restaurant/restaurant.service';
@@ -29,13 +30,12 @@ export class AddRestaurantPage implements OnInit {
   success: string = '';
   error: string = '';
   name: string = '';
-
   description: string = '';
   tags: [];
 
   async addRestaurant() {
     this.restaurantService
-      .createRestaurant(this.name, this.description)
+      .createRestaurant(this.name, this.description,this.tags)
       .then(() => {
         this.success = 'Logged in';
         this.error = '';

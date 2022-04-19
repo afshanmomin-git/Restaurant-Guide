@@ -16,7 +16,7 @@ export class ViewRestaurantPage implements OnInit {
     lng: 1,
   };
   address: String = '';
-  tag: String = '';
+  tags: String = '';
   rating: Number = 3;
   restaurant: any = {};
 

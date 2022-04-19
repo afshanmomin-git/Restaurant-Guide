@@ -19,10 +19,14 @@
   <div>
     
     <div class="content">
-      
+      <ion-img
+            class="container__image"
+            src="../../assets/pasta.jpeg"
+            id="image"
+          ></ion-img>
         <ion-text>Name : {{restaurant.restaurantName}}</ion-text><br/>
         <ion-text>Description : {{restaurant.description}}</ion-text><br/>
-        <ion-text>Tag : {{restaurant.tag}} </ion-text><br/><br/>
+        <ion-text>Tag : {{restaurant.tags}} </ion-text><br/><br/>
             
         <ion-button  (click)="cancel()"> Cancel</ion-button>
     </div>
