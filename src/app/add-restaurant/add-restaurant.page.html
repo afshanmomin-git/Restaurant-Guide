@@ -1,30 +1,55 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title class="ion-text-center" size="small" >Add Restaurant</ion-title>
-      <ion-buttons  slot="start">
-        <ion-back-button  defaultHref="home"></ion-back-button>
-      </ion-buttons>
-    </ion-toolbar>
+    <ion-title class="ion-text-center" size="small">Add Restaurant</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div id="container">
+   
+
     <ion-text> Add Restaurant </ion-text>
   </div>
   <ion-item>
     <ion-label position="floating">Restaurant Name</ion-label>
-    <ion-input placeholder='Restaurant Name' type='text' [(ngModel)]="name" ></ion-input>
+    <ion-input
+      placeholder="Restaurant Name"
+      type="text"
+      [(ngModel)]="name"
+    ></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Address</ion-label>
+<<<<<<< HEAD
     <ion-input placeholder='Address' type='text' [(ngModel)]="address" ></ion-input>
   </ion-item>
   
-  <ion-item>
-    <ion-label position="floating">Street Name</ion-label>
-    <ion-input placeholder='Street Name' [(ngModel)]="streetName" ></ion-input>
+=======
+    <ion-input
+      placeholder="Address"
+      type="text"
+      [(ngModel)]="Address"
+    ></ion-input>
   </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Description</ion-label>
+    <ion-textarea
+      type="text"
+      placeholder="Enter Description"
+      [(ngModel)]="description"
+    ></ion-textarea>
+  </ion-item>
+>>>>>>> 548e81364806576821ca54c028e81e3b5a4d29f6
+  <ion-item>
+    <ion-label position="floating">Tags</ion-label>
+    <ion-input placeholder="Tags" type="text" [(ngModel)]="tags"></ion-input>
+  </ion-item>
+<<<<<<< HEAD
     <ion-item>
       <ion-label position="floating">City</ion-label>
       <ion-input placeholder='City' [(ngModel)]="city"></ion-input>
@@ -56,15 +81,24 @@
     <ion-item>
       <ion-label position="floating">Tags</ion-label>
       <ion-input placeholder='Tags' type='text' [(ngModel)]="tags" ></ion-input>
+=======
+  <ion-item>
+    <ion-label position="floating" >Upload Image</ion-label>
+    <ion-input type="file" name="photo" [(ngModel)]="image"></ion-input>
+>>>>>>> 548e81364806576821ca54c028e81e3b5a4d29f6
     </ion-item>
-    <br/>
+  <br />
 
-    <ion-row>
-      <ion-col col-6> 
-          <ion-button color="danger"  (click)="cancel()" role="button">Cancel</ion-button>
-        </ion-col>
-        <ion-col col-6>
-          <ion-button type="submit" (click)="addRestaurant()">Add Restaurant</ion-button>
-        </ion-col>
-    </ion-row>
+  <ion-row>
+    <ion-col col-6>
+      <ion-button color="danger" (click)="cancel()" role="button"
+        >Cancel</ion-button
+      >
+    </ion-col>
+    <ion-col col-6>
+      <ion-button type="submit" (click)="addRestaurant()"
+        >Add Restaurant</ion-button
+      >
+    </ion-col>
+  </ion-row>
 </ion-content>
