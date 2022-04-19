@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { IonicRatingModule } from 'ionic4-rating';
 
-import { AddRestaurantPage } from './add-restaurant.page';
+import { EditRestuarantPage } from './edit-restuarant.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: AddRestaurantPage
+    component: EditRestuarantPage
   }
 ];
 
@@ -15,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AddRestaurantPageRoutingModule {}
+export class EditRestuarantPageRoutingModule {}
