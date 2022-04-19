@@ -46,6 +46,8 @@
               <div class="container__text">
               <ion-label>  {{item.restaurantName}}</ion-label>
               <ion-label text-wrap>  {{item.description}}</ion-label>
+              <button 
+      (click)='navigateToViewRestaurant(item.id)'>view</button>
             </div>
             <!-- </ion-col>
           </ion-row>

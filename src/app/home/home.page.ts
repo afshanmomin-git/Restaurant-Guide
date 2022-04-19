@@ -31,8 +31,8 @@ export class HomePage {
     this.router.navigateByUrl('/add-restaurant');
   }
 
-  navigateToViewRestaurant(id: any) {
-    this.router.navigateByUrl(`/view-restaurant?id=${id}`);
+  ViewRestaurant(id: any) {
+    this.router.navigateByUrl(`/restaurant-details?id=${id}`);
   }
 
   aboutUs() {
@@ -41,7 +41,7 @@ export class HomePage {
   addRestaurant() {
     this.navCtrl.navigateForward('/add-restaurant');
   }
-  getRestaurant() {
-    this.navCtrl.navigateForward('/restaurant-details');
+  navigateToViewRestaurant(id:any){
+    this.router.navigateByUrl(`/view-restaurant?id=${id}`)
   }
 }
