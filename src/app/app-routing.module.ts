@@ -20,8 +20,8 @@ const routes: Routes = [
     loadChildren: () => import('./add-restaurant/add-restaurant.module').then( m => m.AddRestaurantPageModule)
   },
   {
-    path: 'restaurant-details',
-    loadChildren: () => import('./restaurant-details/restaurant-details.module').then( m => m.RestaurantDetailsPageModule)
+    path: 'view-restaurant',
+    loadChildren: () => import('./view-restaurant/view-restaurant.module').then( m => m.ViewRestaurantPageModule)
   },
 ];
 

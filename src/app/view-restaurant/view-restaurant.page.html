@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>View Restaurant</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  <div id="container">
+    <google-map
+    height="300px"
+    width="100%"
+    [center]="geo">
+      <map-marker
+      [position]="geo"
+      [title]="name"></map-marker>
+    </google-map>
+    <br/>
+  </div>
+  <div>
+    
+    <div class="content">
+        <ion-text>Name : {{restaurant.restaurantName}}</ion-text><br/>
+   
+        <ion-text>Description : {{restaurant.description}}</ion-text><br/>
+        <ion-text>Tag : {{restaurant.tag}} </ion-text><br/><br/>
+            
+        <ion-button (click)="appComponent.goBack()">Cancel</ion-button>
+    </div>
+  </div>
+</ion-content>
