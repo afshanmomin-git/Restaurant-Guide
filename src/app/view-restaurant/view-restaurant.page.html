@@ -1,6 +1,11 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title class="ion-text-center" size="small">View Restaurant</ion-title>
+    <ion-title class="ion-text-center" size="med">View Restaurant</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="navigateToEditRestaurant(restaurant.id)">
+        <ion-icon slot="icon-only" name="create-outline" size="medium"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
@@ -30,7 +35,6 @@
         <ion-text>Name : {{restaurant.restaurantName}}</ion-text><br/>
         <ion-text>Description : {{restaurant.description}}</ion-text><br/>
         <ion-text>Tag : {{restaurant.tags}} </ion-text><br/><br/>
-            
         <ion-button  (click)="cancel()"> Cancel</ion-button>
     </div>
   </div>

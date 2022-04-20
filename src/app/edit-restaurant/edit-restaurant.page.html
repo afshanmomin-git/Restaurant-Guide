@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center" size="med">Edit Restaurant</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="error !== ''">
+    <ion-text color="danger"> {{ error }} </ion-text>
+  </div>
+  <div *ngIf="success !== ''">
+    <ion-text color="success"> {{ success }} </ion-text>
+  </div>
+  <div>
+    <div class="content">
+
+
+
+      <ion-item>
+        <ion-label position="floating">Restaurant Name</ion-label>
+        <ion-input
+          placeholder="Restaurant Name"
+          type="text"
+          [(ngModel)]="name"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Address</ion-label>
+        <ion-input
+          placeholder="Address"
+          type="text"
+          [(ngModel)]="address"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-input
+          placeholder="Description"
+          type="text"
+          [(ngModel)]="description"
+        ></ion-input>
+      </ion-item>
+      <br />
+      
+      <ion-button position="floating" (click)="handleSave()">Save</ion-button>
+      <ion-button color="danger" (click)="cancel()" role="button"
+        >Cancel</ion-button
+      >
+    </div>
+  </div>
+</ion-content>
