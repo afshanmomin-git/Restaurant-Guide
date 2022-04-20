@@ -23,6 +23,7 @@ const routes: Routes = [
     path: 'view-restaurant',
     loadChildren: () => import('./view-restaurant/view-restaurant.module').then( m => m.ViewRestaurantPageModule)
   },
+ 
 ];
 
 @NgModule({

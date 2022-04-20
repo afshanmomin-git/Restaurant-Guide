@@ -34,7 +34,7 @@
     </div>
   </div>
    
-  <div class="listContainer">
+  <div class="listContainer"  (click)='navigateToViewRestaurant(item.id)'>
     <ion-list *ngFor="let item of allRestaurant" (click)="getRestaurant()">
       <ion-item >
         <!-- <ion-grid>

@@ -20,11 +20,11 @@
     
     <div class="content">
         <ion-text>Name : {{restaurant.restaurantName}}</ion-text><br/>
-   
         <ion-text>Description : {{restaurant.description}}</ion-text><br/>
         <ion-text>Tag : {{restaurant.tag}} </ion-text><br/><br/>
             
         <ion-button (click)="appComponent.goBack()">Cancel</ion-button>
-    </div>
+        <ion-button (click)="navigateToEditRestaurant(restaurant.id)">Edit</ion-button> <br/>         
+      </div>
   </div>
 </ion-content>
