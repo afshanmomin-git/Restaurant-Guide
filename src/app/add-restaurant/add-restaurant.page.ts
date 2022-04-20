@@ -40,7 +40,7 @@ export class AddRestaurantPage implements OnInit {
     this.restaurantService
       .createRestaurant(this.name, this.description,this.address,this.phoneNumber,this.tags)
       .then(() => {
-        this.success = 'Logged in';
+        this.success = 'Saved';
         this.error = '';
         this.router.navigateByUrl('/home');
       })

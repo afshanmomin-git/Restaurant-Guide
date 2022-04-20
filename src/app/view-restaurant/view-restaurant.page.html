@@ -1,6 +1,14 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>View Restaurant</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center" size="med">View Restaurant</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="navigateToEditRestaurant(restaurant.id)">
+        <ion-icon slot="icon-only" name="create-outline" size="medium"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
