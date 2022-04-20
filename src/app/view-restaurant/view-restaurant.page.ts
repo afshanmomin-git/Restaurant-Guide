@@ -16,6 +16,7 @@ export class ViewRestaurantPage implements OnInit {
     lng: 1,
   };
   address: String = '';
+  phoneNumber : String = '';
   tags: String = '';
   rating: Number = 3;
   restaurant: any = {};
@@ -35,6 +36,7 @@ export class ViewRestaurantPage implements OnInit {
     this.name = this.restaurant.restaurantName;
     this.address = this.restaurant.address;
     this.description = this.restaurant.description;
+    this.phoneNumber = this.restaurant.phoneNumber;
     this.geo = this.restaurant.geo;
   }
   cancel() {

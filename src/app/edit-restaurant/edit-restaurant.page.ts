@@ -20,6 +20,7 @@ export class EditRestaurantPage implements OnInit {
   name: String = '';
   address: String = '';
   description: String = '';
+  phoneNumber : String = '';
   tags: [];
 
   constructor(
@@ -35,11 +36,14 @@ export class EditRestaurantPage implements OnInit {
     this.name = this.restaurant.restaurantName;
     this.address = this.restaurant.address;
     this.description = this.restaurant.description;
+    this.phoneNumber = this.restaurant.phoneNumber;
   }
   async handleSave(){
     const details = {
       restaurantName: this.name,
       description: this.description,
+      address :this.address,
+      phoneNumber : this.phoneNumber,
       tags: this.tags,
     }
     this.RestService

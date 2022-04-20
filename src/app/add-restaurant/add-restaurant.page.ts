@@ -32,11 +32,13 @@ export class AddRestaurantPage implements OnInit {
   error: string = '';
   name: string = '';
   description: string = '';
+  address : string = '';
+  phoneNumber : string = '';
   tags: [];
 
   async addRestaurant() {
     this.restaurantService
-      .createRestaurant(this.name, this.description,this.tags)
+      .createRestaurant(this.name, this.description,this.address,this.phoneNumber, this.tags)
       .then(() => {
         this.success = 'Saved';
         this.error = '';

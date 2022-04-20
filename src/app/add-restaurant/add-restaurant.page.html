@@ -28,7 +28,7 @@
     <ion-input
       placeholder="Address"
       type="text"
-      [(ngModel)]="Address"
+      [(ngModel)]="address"
     ></ion-input>
   </ion-item>
 
@@ -40,6 +40,15 @@
       [(ngModel)]="description"
     ></ion-textarea>
   </ion-item>
+    <ion-item>
+      <ion-label position="floating">Phone Number</ion-label>
+      <ion-input
+        placeholder="Phone Number"
+        type="text"
+        [(ngModel)]="phoneNumber"
+      ></ion-input>
+    </ion-item>
+
   <ion-item>
     <ion-label position="floating">Tags</ion-label>
     <ion-input placeholder="Tags" type="text" [(ngModel)]="tags"></ion-input>
