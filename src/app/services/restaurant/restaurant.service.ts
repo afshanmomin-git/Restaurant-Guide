@@ -7,12 +7,11 @@ import { Storage } from '@capacitor/storage';
 export class RestaurantService {
   constructor() {}
 
-  public async createRestaurant(restaurantName: string, description: string,tags: string[]) {
+  public async createRestaurant(restaurantName: string, description: string,tags: string[], rating: number) {
     const temp = await Storage.get({ key: 'restaurants' });
     let allRestaurants = temp.value ? JSON.parse(temp.value) : [];
     const restaurantWithSameName = allRestaurants.find(
       (restaurant) => restaurant.restaurantName === restaurantName
-    );
     if (restaurantWithSameName !== undefined) {
       throw 'Restaurant name is taken';
     }
@@ -22,6 +21,7 @@ export class RestaurantService {
       restaurantName,
       description,
       tags,
+      rating,
     });
     await Storage.set({
       key: 'restaurants',

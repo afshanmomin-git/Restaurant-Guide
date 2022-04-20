@@ -9,57 +9,47 @@
 
 <ion-content>
   <div id="container">
-   
+
 
     <ion-text> Add Restaurant </ion-text>
   </div>
-  
+
   <ion-item>
     <ion-label position="floating">Restaurant Name</ion-label>
-    <ion-input
-      placeholder="Restaurant Name"
-      type="text"
-      [(ngModel)]="name"
-    ></ion-input>
+    <ion-input placeholder="Restaurant Name" type="text" [(ngModel)]="name"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Address</ion-label>
-    <ion-input
-      placeholder="Address"
-      type="text"
-      [(ngModel)]="Address"
-    ></ion-input>
+    <ion-input placeholder="Address" type="text" [(ngModel)]="Address"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Description</ion-label>
-    <ion-textarea
-      type="text"
-      placeholder="Enter Description"
-      [(ngModel)]="description"
-    ></ion-textarea>
+    <ion-textarea type="text" placeholder="Enter Description" [(ngModel)]="description"></ion-textarea>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Tags</ion-label>
     <ion-input placeholder="Tags" type="text" [(ngModel)]="tags"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="floating" >Upload Image</ion-label>
+    <ion-label position="floating">Upload Image</ion-label>
     <ion-input type="file" name="photo" [(ngModel)]="image"></ion-input>
-    </ion-item>
+  </ion-item>
   <br />
+  <ion-item>
+    <ion-label position="floating">Rating</ion-label>
+  <br/>
+    <ion-rating (rateChange)="onRateChange($event)">
+    </ion-rating>
 
+  </ion-item>
   <ion-row>
     <ion-col col-6>
-      <ion-button color="danger" (click)="cancel()" role="button"
-        >Cancel</ion-button
-      >
+      <ion-button color="danger" (click)="cancel()" role="button">Cancel</ion-button>
     </ion-col>
     <ion-col col-6>
-      <ion-button type="submit" (click)="addRestaurant()"
-        >Add Restaurant</ion-button
-      >
+      <ion-button type="submit" (click)="addRestaurant()">Add Restaurant</ion-button>
     </ion-col>
   </ion-row>
 </ion-content>

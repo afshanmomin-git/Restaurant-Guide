@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { AddRestaurantPageRoutingModule } from './add-restaurant-routing.module';
+import { IonicRatingModule } from 'ionic-rating';
 
 import { AddRestaurantPage } from './add-restaurant.page';
 
@@ -13,7 +14,8 @@ import { AddRestaurantPage } from './add-restaurant.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    AddRestaurantPageRoutingModule,
+    AddRestaurantPageRoutingModule, 
+    IonicRatingModule,
   ],
   declarations: [AddRestaurantPage]
 })

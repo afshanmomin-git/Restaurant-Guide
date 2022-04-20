@@ -35,6 +35,13 @@
         <ion-text>Name : {{restaurant.restaurantName}}</ion-text><br/>
         <ion-text>Description : {{restaurant.description}}</ion-text><br/>
         <ion-text>Tag : {{restaurant.tags}} </ion-text><br/><br/>
+        <ion-item>
+          <ion-label position="floating">Rating</ion-label>
+        <br/>
+          <ion-rating (rateChange)="onRateChange($event)">
+          </ion-rating>
+      
+        </ion-item>
         <ion-button  (click)="cancel()"> Cancel</ion-button>
     </div>
   </div>

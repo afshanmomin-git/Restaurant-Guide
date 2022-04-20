@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { ViewRestaurantPageRoutingModule } from './view-restaurant-routing.module';
+import { IonicRatingModule } from 'ionic-rating';
 
 import { ViewRestaurantPage } from './view-restaurant.page';
 
@@ -14,6 +15,7 @@ import { ViewRestaurantPage } from './view-restaurant.page';
     FormsModule,
     IonicModule,
     ViewRestaurantPageRoutingModule,
+    IonicRatingModule,
 
   ],
   declarations: [ViewRestaurantPage]

@@ -35,6 +35,7 @@ export class ViewRestaurantPage implements OnInit {
     this.name = this.restaurant.restaurantName;
     this.address = this.restaurant.address;
     this.description = this.restaurant.description;
+    this.rating = this.restaurant.rating;
     this.geo = this.restaurant.geo;
   }
   cancel() {
