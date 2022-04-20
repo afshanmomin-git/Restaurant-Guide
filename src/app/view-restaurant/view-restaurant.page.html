@@ -32,12 +32,48 @@
             src="../../assets/pasta.jpeg"
             id="image"
           ></ion-img>
-        <ion-text>Name : {{restaurant.restaurantName}}</ion-text><br/>
-        <ion-text>Description : {{restaurant.description}}</ion-text><br/>
-        <ion-text>Tag : {{restaurant.tags}} </ion-text><br/><br/>
-        <ion-text>address : {{restaurant.address}} </ion-text><br/><br/>
-        <ion-text>Phone Number : {{restaurant.phoneNumber}} </ion-text><br/><br/>
-        <ion-button  (click)="cancel()"> Cancel</ion-button>
+        <br/><ion-text><b> {{restaurant.restaurantName}}</b></ion-text><br/>
+        <ion-text> {{restaurant.description}}</ion-text><br/>
+        <ion-text><b>Tags </b> {{restaurant.tags}} </ion-text><br/><br/>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div id="details">
+                <ion-text><b>Address</b> <br/>{{restaurant.address}} </ion-text>
+                <ion-text>{{restaurant.phoneNumber}} </ion-text><br/><br/>
+              </div>
+            </ion-col>
+            <ion-col >
+
+              <div id="mapImage">
+                <ion-img
+                class="container__image"
+                src="../../assets/map.png"
+                id="image2"
+               height="60"
+               width = '120'
+              ></ion-img>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <div>
+          <ion-icon name ="logo-facebook" md = "logo-facebook" size = 'large'color="primary-shade"></ion-icon>
+          <ion-icon name ="mail" md = "ios-mail" size = 'large'color="facebook"></ion-icon>
+          <ion-icon name ="logo-twitter" md = "logo-twitter" size = 'large'color="blue"></ion-icon>
+
+
+        </div>
+
+        <ion-row>
+            <ion-col col-2>
+              <ion-button color="danger" (click)="cancel()" role="button"> Cancel</ion-button>
+            </ion-col>
+            <ion-col col-2>
+              <ion-button  color="danger" (click)="cancel()" role="button"> Delete</ion-button>
+            </ion-col>
+        </ion-row>
     </div>
   </div>
 </ion-content>
