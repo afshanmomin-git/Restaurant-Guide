@@ -37,6 +37,7 @@ export class EditRestaurantPage implements OnInit {
     this.address = this.restaurant.address;
     this.description = this.restaurant.description;
     this.phoneNumber = this.restaurant.phoneNumber;
+    this.tags = this.restaurant.tags;
   }
   async handleSave(){
     const details = {

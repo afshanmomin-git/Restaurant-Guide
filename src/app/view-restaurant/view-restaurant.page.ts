@@ -11,14 +11,10 @@ export class ViewRestaurantPage implements OnInit {
   edit: Boolean = false;
   name: String = '';
   description: String = '';
-  geo: any = {
-    lat: 1,
-    lng: 1,
-  };
+ 
   address: String = '';
-  phoneNumber : String = '';
+  phoneNumber: String = '';
   tags: String = '';
-  rating: Number = 3;
   restaurant: any = {};
 
   constructor(
@@ -37,7 +33,6 @@ export class ViewRestaurantPage implements OnInit {
     this.address = this.restaurant.address;
     this.description = this.restaurant.description;
     this.phoneNumber = this.restaurant.phoneNumber;
-    this.geo = this.restaurant.geo;
   }
   cancel() {
     this.router.navigateByUrl('/home');
@@ -47,8 +42,5 @@ export class ViewRestaurantPage implements OnInit {
 
   navigateToEditRestaurant(id: any) {
     this.router.navigateByUrl(`/edit-restaurant?id=${id}`);
-  }
-  handleSave() {
-    // this.RestService.editRestaurant(this.restaurantId, )
   }
 }

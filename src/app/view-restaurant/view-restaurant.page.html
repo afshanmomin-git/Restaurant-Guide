@@ -33,8 +33,8 @@
             id="image"
           ></ion-img>
         <br/><ion-text><b> {{restaurant.restaurantName}}</b></ion-text><br/>
-        <ion-text> {{restaurant.description}}</ion-text><br/>
-        <ion-text><b>Tags </b> {{restaurant.tags}} </ion-text><br/><br/>
+        <ion-text> <b>{{restaurant.description}}</b></ion-text><br/>
+        <ion-text><b>Tags:</b> {{restaurant.tags}} </ion-text><br/><br/>
         <ion-grid>
           <ion-row>
             <ion-col>
@@ -68,7 +68,7 @@
 
         <ion-row>
             <ion-col col-2>
-              <ion-button color="danger" (click)="cancel()" role="button"> Cancel</ion-button>
+              <ion-button color="danger" (click)="removePost(item)" role="button"> Cancel</ion-button>
             </ion-col>
             <ion-col col-2>
               <ion-button  color="danger" (click)="cancel()" role="button"> Delete</ion-button>

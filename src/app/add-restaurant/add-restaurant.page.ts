@@ -14,19 +14,7 @@ export class AddRestaurantPage implements OnInit {
     private router: Router
   ) {}
 
-  // id:any;
-  // name:any;
-  // address:any;
-  // number:any;
-  // rating:any;
-  // tags:any;
-  // comments:any;
-  // confirm:any;
 
-  // streetNo:any;
-  // streetName:any;
-  // streetType:any;
-  // city:any;
 
   success: string = '';
   error: string = '';

@@ -27,13 +27,9 @@ export class HomePage {
     this.allRestaurant = await this.RestService.getAllRestaurants();
   }
 
-  navigateToAddRestaurant() {
-    this.router.navigateByUrl('/add-restaurant');
-  }
-
-  ViewRestaurant(id: any) {
-    this.router.navigateByUrl(`/restaurant-details?id=${id}`);
-  }
+  // navigateToAddRestaurant() {
+  //   this.router.navigateByUrl('/add-restaurant');
+  // }
 
   aboutUs() {
     this.navCtrl.navigateForward('/about-us');
@@ -41,7 +37,7 @@ export class HomePage {
   addRestaurant() {
     this.navCtrl.navigateForward('/add-restaurant');
   }
-  navigateToViewRestaurant(id:any){
-    this.router.navigateByUrl(`/view-restaurant?id=${id}`)
+  navigateToViewRestaurant(id: any) {
+    this.router.navigateByUrl(`/view-restaurant?id=${id}`);
   }
 }
