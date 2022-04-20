@@ -42,8 +42,9 @@ export class ViewRestaurantPage implements OnInit {
   }
 
   goToLocation() {}
+
   navigateToEditRestaurant(id: any) {
-    this.router.navigateByUrl(`/edit-restuarant?id=${id}`);
+    this.router.navigateByUrl(`/edit-restaurant?id=${id}`);
   }
   handleSave() {
     // this.RestService.editRestaurant(this.restaurantId, )
