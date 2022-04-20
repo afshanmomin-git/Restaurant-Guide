@@ -1,43 +1,37 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RestaurantService } from '../services/restaurant/restaurant.service';
+
+
 @Component({
   selector: 'app-add-restaurant',
   templateUrl: './add-restaurant.page.html',
   styleUrls: ['./add-restaurant.page.scss'],
 })
 export class AddRestaurantPage implements OnInit {
-  
   constructor(
     private restaurantService: RestaurantService,
     private router: Router,
   ) { }
-
-  // id:any;
-  // name:any;
-  // address:any;
-  // number:any;
-  // rating:any;
-  // tags:any;
-  // comments:any;
+    
+  address:any;
+  number:any;
+  rate: any;
+  
+  comments:any;
   // confirm:any;
-
-  // streetNo:any;
-  // streetName:any;
-  // streetType:any;
-  // city:any;
+  streetName: any;
+  city:any;
   
   success:string=''
   error:string=''
   name:string=''
 
-  description: string=''
-  tags:[]
+ 
 
+  description: string = '';
+  tags: [];
 
-
-
-  
   async addRestaurant() {
     this.restaurantService
     .createRestaurant(
@@ -57,12 +51,14 @@ export class AddRestaurantPage implements OnInit {
 
 
   }
+  onRateChange(event) {
+    console.log('Your rate:', event);
+  }
   
   cancel(){
     this.router.navigateByUrl('/home')
   }
 
-  ngOnInit() {
-  }
 
+  ngOnInit() {}
 }
