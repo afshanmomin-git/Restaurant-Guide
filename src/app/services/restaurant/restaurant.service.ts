@@ -75,4 +75,12 @@ export class RestaurantService {
     await Storage.set({key:"restaurants", value:JSON.stringify(restaurants)});
     return true;
   }
+  public async searchRestaurants(searchValue: string) {
+    const allRestaurants = await this.getAllRestaurants();
+    const restaurants = allRestaurants.filter(restaurant => {
+      restaurant.restaurantName.toLowerCase().includes(searchValue.toLowerCase()) ||
+      restaurant.tags.findIndex(tag => tag.toLowerCase().includes(searchValue.toLowerCase()))
+    });
+    return restaurants;
+  }
 }

@@ -16,6 +16,9 @@ export class HomePage {
     public navCtrl: NavController
   ) {}
 
+  success: string = '';
+  error: string = '';
+
   ionViewDidEnter() {
     this.loader();
   }
@@ -35,5 +38,17 @@ export class HomePage {
   }
   navigateToViewRestaurant(id: any) {
     this.router.navigateByUrl(`/view-restaurant?id=${id}`);
+  }
+   
+  async search(searchString){
+    this.RestService
+      .searchRestaurants(searchString)
+      .then(() => {
+        this.router.navigateByUrl('/home')
+      })
+      .catch(err => {
+        this.error = err;
+        this.success = ""
+      });
   }
 }
