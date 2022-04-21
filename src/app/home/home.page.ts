@@ -27,10 +27,6 @@ export class HomePage {
     this.allRestaurant = await this.RestService.getAllRestaurants();
   }
 
-  // navigateToAddRestaurant() {
-  //   this.router.navigateByUrl('/add-restaurant');
-  // }
-
   aboutUs() {
     this.navCtrl.navigateForward('/about-us');
   }
