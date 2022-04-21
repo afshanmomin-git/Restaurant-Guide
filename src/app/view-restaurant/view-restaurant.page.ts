@@ -11,7 +11,8 @@ export class ViewRestaurantPage implements OnInit {
   edit: Boolean = false;
   name: String = '';
   description: String = '';
- 
+  success: string = '';
+  error: string = '';
   address: String = '';
   phoneNumber: String = '';
   tags: String = '';
@@ -35,10 +36,30 @@ export class ViewRestaurantPage implements OnInit {
     this.phoneNumber = this.restaurant.phoneNumber;
   }
   cancel() {
+    
     this.router.navigateByUrl('/home');
   }
 
-  goToLocation() {}
+ 
+  async removePost(){
+    const details = {
+      restaurantName: this.name,
+      description: this.description,
+      address :this.address,
+      phoneNumber : this.phoneNumber,
+      tags: this.tags,
+    }
+    this.RestService
+      .deleteRestaurantById(this.restaurantId)
+      .then(() => {
+        this.router.navigateByUrl('/home')
+      })
+      .catch(err => {
+        this.error = err;
+        this.success = ""
+      });
+  }
+
 
   navigateToEditRestaurant(id: any) {
     this.router.navigateByUrl(`/edit-restaurant?id=${id}`);

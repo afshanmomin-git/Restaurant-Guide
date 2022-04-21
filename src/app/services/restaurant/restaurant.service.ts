@@ -68,4 +68,11 @@ export class RestaurantService {
     });
     return restaurants[restaurantIndex];
   }
+
+  public async deleteRestaurantById(id: number) {
+    const allRestaurants = await this.getAllRestaurants();
+    const restaurants = allRestaurants.filter(restaurant => restaurant.id !== id);
+    await Storage.set({key:"restaurants", value:JSON.stringify(restaurants)});
+    return true;
+  }
 }
