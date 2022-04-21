@@ -23,10 +23,10 @@ export class AddRestaurantPage implements OnInit {
   address : string = '';
   phoneNumber : string = '';
   tags: [];
-
+  rating: any;
   async addRestaurant() {
     this.restaurantService
-      .createRestaurant(this.name, this.description,this.address,this.phoneNumber, this.tags)
+      .createRestaurant(this.name, this.description,this.address,this.phoneNumber, this.tags, )
       .then(() => {
         this.success = 'Saved';
         this.error = '';
@@ -40,6 +40,9 @@ export class AddRestaurantPage implements OnInit {
 
   cancel() {
     this.router.navigateByUrl('/home');
+  }
+  onRateChange(rating) {
+    this.rating = rating;
   }
 
   ngOnInit() {}

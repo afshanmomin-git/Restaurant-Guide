@@ -55,6 +55,13 @@
     <ion-input type="file" name="photo" [(ngModel)]="image"></ion-input>
     </ion-item>
   <br />
+  <ion-item>
+    <ion-label position="floating">Rating</ion-label>
+  <br/>
+    <ion-rating (rateChange)="onRateChange($event)">
+    </ion-rating>
+
+  </ion-item>
 
   <ion-row>
     <ion-col >
